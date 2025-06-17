@@ -34,7 +34,7 @@ FastFoodSimulator est une simulation console minimaliste d’un restaurant de ty
 
 > Exemple d'exécution :
 
-![FastFoodSimulator Demo](images/test.JPG)
+![FastFoodSimulator Demo](./images/test.JPG)
 
 ---
 
