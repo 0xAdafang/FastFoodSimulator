@@ -1,0 +1,5 @@
+Makefile linguist-language=Ignore
+*.ll linguist-language=Ignore
+*.rs linguist-language=Rust
+/src/** linguist-detectable=true
+* linguist-language=Rust
