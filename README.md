@@ -2,7 +2,8 @@
 
 **FastFoodSimulator** is a minimalist console simulation of a fast-food restaurant, **rewritten in Rust**. The project models the basic operational flow: customer arrival, order taking, cooking, and serving — each step handled **asynchronously** and with **concurrency**.
 
-> 🎯 This project allowed me to practice key Rust concepts such as `Arc`, `Mutex`, `tokio::sleep`, async task management, and clean modular structure.
+> 🎯 This project allowed me to practice key Rust concepts such as `Arc`, `Mutex`, `tokio::sleep`, async task management, and clean modular structure.*
+> > ⚠️ *Note: The app is currently in French due to its localized target audience.*
 
 ---
 
