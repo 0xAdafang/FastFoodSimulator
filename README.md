@@ -1,55 +1,54 @@
 # 🍔 FastFoodSimulator (Rust Edition)
 
-FastFoodSimulator est une simulation console minimaliste d’un restaurant de type fast-food, **réécrite en Rust**. Le projet modélise le flux opérationnel de base : arrivée des clients, prise de commande, préparation en cuisine et service — chaque étape étant gérée **asynchronement** et de manière **concurrente**.
+**FastFoodSimulator** is a minimalist console simulation of a fast-food restaurant, **rewritten in Rust**. The project models the basic operational flow: customer arrival, order taking, cooking, and serving — each step handled **asynchronously** and with **concurrency**.
 
-> 🎯 Ce projet m’a permis de pratiquer des concepts essentiels en Rust comme `Arc`, `Mutex`, `tokio::sleep`, la gestion de tâches asynchrones, ainsi que la séparation logique en modules.
+> 🎯 This project allowed me to practice key Rust concepts such as `Arc`, `Mutex`, `tokio::sleep`, async task management, and clean modular structure.
 
 ---
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- ⏱️ Simulation temps réel avec `tokio::time`
-- 🧱 Workflow complet : `OrderTaker → Cook → Server`
-- 🧵 Concurrence avec `Arc<Mutex<>>`
-- 📦 Code modulaire, lisible, et extensible
-- 🧠 Structure idéale pour expérimenter la logique asynchrone en Rust
+- ⏱️ Real-time simulation using `tokio::time`
+- 🧱 Full workflow: `OrderTaker → Cook → Server`
+- 🧵 Concurrency with `Arc<Mutex<>>`
+- 📦 Modular, readable, and extensible codebase
+- 🧠 Ideal structure to experiment with async logic in Rust
 
 ---
 
 ## 🧩 Architecture
 
-| Composant              | Rôle                                                      |
-|------------------------|-----------------------------------------------------------|
-| `OrderTaker`           | Génère une commande toutes les X secondes                |
-| `Cook`                 | Prépare les commandes en attente                          |
-| `Server`               | Délivre les commandes prêtes aux clients                  |
-| `Customer` (optionnel) | Peut être simulé comme récupérant les commandes servies   |
-| `Simulation`           | Lance et coordonne toutes les tâches                      |
-| `utils/timer.rs`       | Centralise les constantes temporelles                     |
-| `models/order.rs`      | Définit la structure `Order`                              |
+| Component              | Role                                                       |
+|------------------------|------------------------------------------------------------|
+| `OrderTaker`           | Generates an order every X seconds                         |
+| `Cook`                 | Prepares pending orders                                    |
+| `Server`               | Delivers ready orders to customers                         |
+| `Customer` (optional)  | Can be simulated to receive served orders                  |
+| `Simulation`           | Starts and coordinates all tasks                           |
+| `utils/timer.rs`       | Centralizes time-related constants                         |
+| `models/order.rs`      | Defines the `Order` structure                              |
 
 ---
 
-## 📸 Aperçu (Console)
+## 📸 Console Preview
 
-> Exemple d'exécution :
+> Example execution:
 
 ![FastFoodSimulator Demo](./images/test.JPG)
 
 ---
 
-## 📦 Prérequis
+## 📦 Requirements
 
 - Rust 1.70+
 - Cargo
-- VS Code ou tout autre IDE compatible Rust
+- VS Code or any Rust-compatible IDE
 
 ---
 
-## 🚀 Comment lancer
+## 🚀 How to Run
 
 ```bash
 git clone https://github.com/0xAdafang/FastFoodSimulator.git
 cd FastFoodSimulator
 cargo run
-
